@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.1 on win32)" generated="20220121 18:30:12.083" rpa="false" schemaversion="2">
+<suite id="s1" name="CERSTestePraticoBDD" source="C:\CERS\CERSTestePratico\tests\CERSTestePraticoBDD.robot">
+<test id="s1-t1" name="Cenário 01 - Efetuar Login existente">
+<kw name="Abrir navegador" library="resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220121 18:30:12.604" level="INFO">Opening browser 'edge' to base url 'https://www.cers.com.br'.</msg>
+<status status="PASS" starttime="20220121 18:30:12.603" endtime="20220121 18:30:24.969"/>
+</kw>
+<status status="PASS" starttime="20220121 18:30:12.602" endtime="20220121 18:30:24.970"/>
+</kw>
+<kw name="Dado que estou na página home do site e acesso a área de login" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${clique_um}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220121 18:30:24.978" level="INFO">Clicking button '//button[@id='dropdown-login-register-btn']'.</msg>
+<status status="PASS" starttime="20220121 18:30:24.974" endtime="20220121 18:30:25.182"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${clique_dois}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220121 18:30:25.183" level="INFO">Clicking link '//a[@id='dropdown-login-btn']'.</msg>
+<status status="PASS" starttime="20220121 18:30:25.182" endtime="20220121 18:30:25.493"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220121 18:30:28.501" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220121 18:30:25.494" endtime="20220121 18:30:28.501"/>
+</kw>
+<status status="PASS" starttime="20220121 18:30:24.971" endtime="20220121 18:30:28.501"/>
+</kw>
+<kw name="Quando tento logar com o &quot;mariart.designdigital@gmail.com&quot; e &quot;senha12345&quot;" library="resource" sourcename="Quando tento logar com o &quot;${LOGIN}&quot; e &quot;${SENHA}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campo_email}</arg>
+<arg>${LOGIN}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220121 18:30:28.506" level="INFO">Typing text 'mariart.designdigital@gmail.com' into text field '//input[@id='login-email-field']'.</msg>
+<status status="PASS" starttime="20220121 18:30:28.505" endtime="20220121 18:30:29.009"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${botao_prosseguir}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220121 18:30:29.011" level="INFO">Clicking button '//button[@id="login-next-btn"]'.</msg>
+<status status="PASS" starttime="20220121 18:30:29.010" endtime="20220121 18:30:29.260"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campo_senha}</arg>
+<arg>${SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220121 18:30:29.263" level="INFO">Typing text 'senha12345' into text field '//input[@id='login-password-field']'.</msg>
+<status status="PASS" starttime="20220121 18:30:29.261" endtime="20220121 18:30:29.571"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${botao_entrar}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220121 18:30:29.572" level="INFO">Clicking button '//button[@id='login-submit-btn']'.</msg>
+<status status="PASS" starttime="20220121 18:30:29.572" endtime="20220121 18:30:29.765"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220121 18:30:32.768" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220121 18:30:29.765" endtime="20220121 18:30:32.768"/>
+</kw>
+<status status="PASS" starttime="20220121 18:30:28.504" endtime="20220121 18:30:32.768"/>
+</kw>
+<kw name="Então devo estar na tela inicial" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Cursos online Concursos, OAB, Jurídico e Pós Graduação | CERS</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220121 18:30:57.654" level="INFO">Page title is 'Cursos online Concursos, OAB, Jurídico e Pós Graduação | CERS'.</msg>
+<status status="PASS" starttime="20220121 18:30:32.771" endtime="20220121 18:30:57.655"/>
+</kw>
+<status status="PASS" starttime="20220121 18:30:32.769" endtime="20220121 18:30:57.656"/>
+</kw>
+<kw name="Fechar navegador" library="resource" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220121 18:30:57.658" endtime="20220121 18:31:02.813"/>
+</kw>
+<status status="PASS" starttime="20220121 18:30:57.657" endtime="20220121 18:31:02.813"/>
+</kw>
+<status status="PASS" starttime="20220121 18:30:12.600" endtime="20220121 18:31:02.813"/>
+</test>
+<test id="s1-t2" name="Cenário 02 - Efetuar Login inexistente">
+<kw name="Abrir navegador" library="resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220121 18:31:02.820" level="INFO">Opening browser 'edge' to base url 'https://www.cers.com.br'.</msg>
+<status status="PASS" starttime="20220121 18:31:02.818" endtime="20220121 18:31:16.898"/>
+</kw>
+<status status="PASS" starttime="20220121 18:31:02.817" endtime="20220121 18:31:16.898"/>
+</kw>
+<kw name="Dado que estou na página home do site e acesso a área de login" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${clique_um}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220121 18:31:16.905" level="INFO">Clicking button '//button[@id='dropdown-login-register-btn']'.</msg>
+<status status="PASS" starttime="20220121 18:31:16.903" endtime="20220121 18:31:17.653"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${clique_dois}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220121 18:31:17.655" level="INFO">Clicking link '//a[@id='dropdown-login-btn']'.</msg>
+<status status="PASS" starttime="20220121 18:31:17.654" endtime="20220121 18:31:17.947"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220121 18:31:20.956" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220121 18:31:17.947" endtime="20220121 18:31:20.956"/>
+</kw>
+<status status="PASS" starttime="20220121 18:31:16.901" endtime="20220121 18:31:20.957"/>
+</kw>
+<kw name="Quando tento logar com o &quot;mariart.designdigit@gmail.com&quot; e &quot;senha123&quot;" library="resource" sourcename="Quando tento logar com o &quot;${LOGIN}&quot; e &quot;${SENHA}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campo_email}</arg>
+<arg>${LOGIN}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220121 18:31:20.964" level="INFO">Typing text 'mariart.designdigit@gmail.com' into text field '//input[@id='login-email-field']'.</msg>
+<status status="PASS" starttime="20220121 18:31:20.963" endtime="20220121 18:31:21.554"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${botao_prosseguir}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220121 18:31:21.555" level="INFO">Clicking button '//button[@id="login-next-btn"]'.</msg>
+<status status="PASS" starttime="20220121 18:31:21.555" endtime="20220121 18:31:21.878"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campo_senha}</arg>
+<arg>${SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220121 18:31:21.879" level="INFO">Typing text 'senha123' into text field '//input[@id='login-password-field']'.</msg>
+<status status="PASS" starttime="20220121 18:31:21.878" endtime="20220121 18:31:22.126"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${botao_entrar}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220121 18:31:22.127" level="INFO">Clicking button '//button[@id='login-submit-btn']'.</msg>
+<status status="PASS" starttime="20220121 18:31:22.126" endtime="20220121 18:31:22.308"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220121 18:31:25.310" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220121 18:31:22.308" endtime="20220121 18:31:25.310"/>
+</kw>
+<status status="PASS" starttime="20220121 18:31:20.962" endtime="20220121 18:31:25.311"/>
+</kw>
+<kw name="Então a página deve exibir um texto informando &quot;Login e/ou Senha inválido&quot;" library="resource" sourcename="Então a página deve exibir um texto informando &quot;${MENSAGEM}&quot;">
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${MENSAGEM}</arg>
+<arg>Login e/ou Senha inválido</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220121 18:31:25.313" endtime="20220121 18:31:25.313"/>
+</kw>
+<status status="PASS" starttime="20220121 18:31:25.312" endtime="20220121 18:31:25.314"/>
+</kw>
+<kw name="Fechar navegador" library="resource" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220121 18:31:25.316" endtime="20220121 18:31:28.409"/>
+</kw>
+<status status="PASS" starttime="20220121 18:31:25.315" endtime="20220121 18:31:28.409"/>
+</kw>
+<status status="PASS" starttime="20220121 18:31:02.815" endtime="20220121 18:31:28.410"/>
+</test>
+<status status="PASS" starttime="20220121 18:30:12.086" endtime="20220121 18:31:28.413"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="CERSTestePraticoBDD">CERSTestePraticoBDD</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
